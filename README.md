@@ -1,153 +1,459 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style>
-           html{
-                font-size: 15px;
-           }
-			ul{
-				list-style: none;
-				margin: 0;
-				padding: 0;
-			}
-			h1{
-				font-size: 1.5rem;
-				margin: 0;
-			}
-			h2{
-				font-size: 1.2rem;
-				margin: 0;
-			}
-           li{
-                cursor: pointer;
-				  color: white;
-                padding-top:5px; 
-                padding-bottom:5px;
-           } 
-			li:hover{
-                background: #984dfe;
-                
-			}
-			ul.level1{
-				background: #eeeeee;
-              font-size:0; 
-              text-align:center;
-              	padding-top: 5px;
-				padding-bottom: 5px;
-			
-			}
-			ul.level1>li{
-				display: inline-block;
-				width: 200px;
-				background: #5CB85C;	
-              font-size:1rem; 
-              position:relative;
-			}
-			ul.level1>li:hover>ul.level2{
-				display: block;
-			}
-			ul.level2{
-				background: #5Cee5C;
-				display: none;
-				position: absolute;
-				width:100%;
-              top:100%;
-              left:0;     
-			}
-			ul.level2>li{
-				position: relative;
-			}
-			ul.level2>li:hover>ul.level3{
-				display: block;
-			}
-			ul.level3{
-				background: #5Cee3C;
-				display: none;
-				position: absolute;
-				left:100%;
-				width:100%;
-				top:0;
-			}
-			ul.level3>li{
-			
-			
-			}
-			ul.level3>li>a{
-				font-size: 1rem;
-				text-decoration: none;
-               display:block; 
-			}
-		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="./static/css/me.css"/>
+		<title>首页</title>
 	</head>
 	<body>
-		<ul class="level1">
-			<li>
-				<h1>一级菜单1</h1>
-				<ul class="level2">
-					<li>
-						<h2>二级菜单1</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>二级菜单2</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-				</ul>
-
-			</li>
-			<li>
-				<h1>一级菜单2</h1>
-				<ul class="level2">
-					<li>
-						<h2>二级菜单1</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>二级菜单2</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li>
-				<h1>一级菜单3</h1>
-				<ul class="level2">
-					<li>
-						<h2>二级菜单1</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-					<li>
-						<h2>二级菜单2</h2>
-						<ul class="level3">
-							<li><a href="">三级菜单1</a></li>
-							<li><a href="">三级菜单2</a></li>
-							<li><a href="">三级菜单3</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-
+		<!--导航-->
+		<nav class="ui inverted attached segment .m-padded-tb-mini">
+			<div class="ui container">
+				<div class="ui inverted stackable secondary menu">
+					<h2 class="ui teal header item">Blog</h2>
+					<a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+					<a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+					<div class="right item">
+						<div class="ui icon input"> 
+							<input type="text" name="" id="" value="" placeholder="Search...."/>
+							<i class="search link icon"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show"><i class="sidebar icon"></i></a>
+		</nav>
+		<div class="m-padded-tb-large">
+			<div class="ui container">
+				<div class="ui stackable grid">
+					<!-- 左边博客列表 -->
+					<div class="eleven wide column">
+						<!-- 头部内容 -->
+						<div class="ui top attached segment">
+							<div class="ui middle two column grid">
+								<div class="column">
+									<h3 class="ui  teal header">博客</h3>
+								</div>
+								<div class="right aligned column">
+									共<h3 class="ui orange header m-inline-block"> 14 </h3>篇
+								</div>
+							</div>
+						</div>
+						<!-- 中间内容 -->
+						<div class="ui attached  segment">
+							<div class="ui padded  vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p class="m-text">这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ui padded  vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p>这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ui padded  vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p>这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ui padded  vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p>这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ui padded   vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p>这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="ui padded  vertical segment m-padded-tb-large">
+								<div class="ui mobile reversed stackable grid">
+									<div class="eleven wide column">
+										<h3 class=" ui header">这是我都第一个博客系统</h3>
+										<p>这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统这是我都第一个博客系统</p>
+										<div class="ui grid">
+											<div class="eleven wide column">
+												<div class="ui horizontal link list">
+													<div class="item">
+														<img src="https://picsum.photos/id/1/100/100" alt="" class="ui avatar image">
+														<div class="content">
+															<a class="header" style="font-size: 0.2em;">
+																王武强
+															</a>
+														</div>
+													</div>	
+														<div class="item">
+															<i class="calendar icon"></i>2021-3-29
+														</div>
+														<div class="item">
+															<i class="eye icon"></i>4000
+														</div> 	
+												</div>
+											</div>
+											<div class="right aligned five wide column">
+												<a href="#" target="_blank" class="ui teal basic label">
+													认知升级
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="five wide column">
+										<a href="#" target="_blank">
+											<img src="https://picsum.photos/id/1/800/450" alt="" class="ui rounded image">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 底部内容 -->
+						<div class="ui bottom attached segment">
+							<div class="ui middle two column grid">
+								<div class="column">
+									<a href="#" class="ui teal basic button">上一页</a>
+								</div>
+								<div class="right aligned column">
+									<a href="#" class="ui teal basic button">下一页</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="five wide column">
+						<!-- 分类 -->
+						<div class="ui segments">
+							<div class="ui secondary segment">
+								<div class="ui two column grid">
+									<div class="column">
+										<i class="idea icon"></i>分类
+									</div>
+									<div class=" right aligned column">
+										<a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="ui teal segment">
+								<div class="ui fluid vertical menu">
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+									<a href="#" class="item">
+										学习日志
+										<div class="ui teal basic left pointing label">
+											15
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="ui segments">
+							<div class="ui secondary segment">
+								<div class="ui two column grid">
+									<div class="column">
+										<i class="tags icon"></i>标签
+									</div>
+									<div class=" right aligned column">
+										<a href="#" target="_blank">more <i class="angle double right icon"></i></a>
+									</div>
+								</div>
+							</div>
+							<div class="ui teal segment">
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									spring <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									redis <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									springmvc <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									springboot <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									vue <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									node.js <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									springdata <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									serverlt <div class="detail">11</div>
+								</a>
+								<a href="#" target="_blank" class="ui teal basic left pointing label m-margin-tb-mini">
+									java <div class="detail">11</div>
+								</a>
+							</div>
+						</div>
+						<div class="ui segments">
+							<div class="ui secondary segment">
+								<i class="bookmark icon"></i>最新推荐
+							</div>
+							<div class="ui knock segment">
+								<a href="#" target="_blank" style="color: black;">springboot</a>
+							</div>
+							<div class="ui segment">
+								<a href="#" target="_blank" style="color: black;">springmvc</a>
+							</div>
+							<div class="ui segment">
+								<a href="#" target="_blank" style="color: black;">springdata</a>
+							</div>
+							<div class="ui segment">
+								<a href="#" target="_blank" style="color: black;">redis</a>
+							</div>
+						</div>
+						<!-- 二维码 -->
+						
+							<h4 class="ui horizontal divider header">扫码关注我</h4>
+							<div class="ui centered card" style="width: 10em;">
+								<img src="static/images/ww.jpg" alt="" class="ui rounded image" >
+							</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		
+		<!-- 底部 -->
+		<footer class="ui inverted vertical segment m-padded-tb-massive">
+			<div class="ui center aligned container">
+				<div class="ui stackable inverted divided grid">
+					<div class="three wide column">
+						<div class="ui inverted link list">
+							<div class="item">
+								<img src="static/images/ww.jpg"  class="ui rounded image" alt="" style="width: 200px;height: 120px;">
+							</div>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header">最新博客</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">用户咕视</a>
+							<a href="#" class="item">用户咕视</a>
+							<a href="#" class="item">用户咕视</a>
+						</div>
+					</div>
+					<div class="three wide column">
+						<h4 class="ui inverted header">最新博客</h4>
+						<div class="ui inverted link list">
+							<a href="#" class="item">用户咕视</a>
+							<a href="#" class="item">用户咕视</a>
+							<a href="#" class="item">用户咕视</a>
+						</div>
+					</div>
+					<div class="seven wide column">
+						<h4 class="ui inverted header">这是我都最新博客</h4>
+						<p>这是我都最新博客，关于分享学习Java相关的知识</p>
+					</div>
+				</div>
+				<div class="ui inverted section divider"></div>
+				<p>wwq个人博客</p>
+			</div>
+			
+		</footer>
+		
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<script>
+			$('.menu.toggle').click(function(){
+				$('.m-item').toggleClass('m-mobile-hide');
+			});
+		</script>
 	</body>
 </html>
